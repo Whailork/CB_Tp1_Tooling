@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "CB_TP1_Tooling/1.0.0": {
+        "runtime": {
+          "CB_TP1_Tooling.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CB_TP1_Tooling/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

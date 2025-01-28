@@ -1,0 +1,15 @@
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\bin\Debug\net9.0\CB_TP1_Tooling.exe
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\bin\Debug\net9.0\CB_TP1_Tooling.deps.json
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\bin\Debug\net9.0\CB_TP1_Tooling.runtimeconfig.json
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\bin\Debug\net9.0\CB_TP1_Tooling.dll
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\bin\Debug\net9.0\CB_TP1_Tooling.pdb
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\CB_TP1_Tooling.GeneratedMSBuildEditorConfig.editorconfig
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\CB_TP1_Tooling.AssemblyInfoInputs.cache
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\CB_TP1_Tooling.AssemblyInfo.cs
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\CB_TP1_Tooling.csproj.CoreCompileInputs.cache
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\CB_TP1_Tooling.sourcelink.json
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\CB_TP1_Tooling.dll
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\refint\CB_TP1_Tooling.dll
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\CB_TP1_Tooling.pdb
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\CB_TP1_Tooling.genruntimeconfig.cache
+D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\obj\Debug\net9.0\ref\CB_TP1_Tooling.dll
