@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System.Diagnostics;
+using System.Runtime.Loader;
 using System.Text;
 using System.Text.Json;
 namespace CB_TP1_Tooling
@@ -51,11 +52,22 @@ namespace CB_TP1_Tooling
                         {
                             Process process = new Process();
                             ProjectInfo projectInfo = GetProjectInfos(projectPath);
+                            
+                            /*ProcessStartInfo startInfo = new ProcessStartInfo
+                            {
+                                FileName = projectPath,
+                                UseShellExecute = true, // Set to false if you want to redirect output
+                                RedirectStandardOutput = false, // Optional, redirect output to the console
+                            };
 
-                            process.StartInfo.Arguments = projectInfo.Modules[0].Name + " " + projectInfo.Modules[0].Name + "EditorTarget " + " Win64 " + " Development " + projectPath + " -waitmutex";
+                            Process.Start(startInfo);*/
 
-                            process.StartInfo.FileName = "D:/UnrealEngine/Engine/Build/BatchFiles/Build.bat";
+                            process.StartInfo.Arguments = $"{projectInfo.Modules[0].Name} {"Win64"} {"Development"} {projectPath}  -waitmutex";
+                            process.StartInfo.FileName = "./Engine/Build/BatchFiles/Build.bat";
+                            //process.StartInfo.UseShellExecute = true;
+                            //process.StartInfo.RedirectStandardOutput = false;
                             process.Start();
+                            process.WaitForExit();
 
                         }
                     }
@@ -67,27 +79,35 @@ namespace CB_TP1_Tooling
                     packagePath = args[2];
                     Console.WriteLine(" project path : " + projectPath);
                     Console.WriteLine(" command : " + command);
-                    Console.WriteLine(" package path : " + command);
+                    Console.WriteLine(" package path : " + packagePath);
 
                     if (command.Equals("package"))
                     {
-                        Process process = new Process();
-
-                       // process.StartInfo.Arguments = "-ScriptsForProject=D:/gitKrakenRepos/EchoBlade/EchoBlade.uproject BuildCookRun -project=D:/gitKrakenRepos/EchoBlade/EchoBlade.uproject -noP4 -clientconfig=Shipping -serverconfig=Shipping -nocompile -nocompileeditor -installed -unrealexe="D:\Epic Games\UE_5.4\UE_5.4\Engine\Binaries\Win64\UnrealEditor-Cmd.exe" -utf8output -platform=Win64 -build -cook -map=ThirdPersonMap+ThirdPersonMap -CookCultures=en -unversionedcookedcontent -stage -package -cmdline="ThirdPersonMap -Messaging" -addcmdline="-SessionId=FB1CDE264A4BECFEA76FDC988BD9580E -SessionOwner='berge' -SessionName='Tooling' "
-
-
-                        process.StartInfo.FileName = "D:/UnrealEngine/Engine/Build/BatchFiles/RunUAT.bat";
-                        process.Start();
+                        try
+                        {
+                            Process process = new Process();
+                            projectPath = projectPath.Replace('/', '\\');
+                            //process.StartInfo.Arguments = "-Messaging -addcmdline= -SessionId=AEB8DEDF4072DA8386DFB2AC9A4483C4 -SessionOwner='berge' -SessionName='Tooling'";
+                            process.StartInfo.Arguments = "-ScriptsForProject=" +projectPath + " BuildCookRun -project=" + projectPath + " -noP4 -clientconfig=Shipping -serverconfig=Shipping -nocompile -nocompileeditor -installed -unrealexe=\"D:/Epic Games/UE_5.4/UE_5.4/Engine/Binaries/Win64/UnrealEditor-Cmd.exe\" -utf8output -platform=Win64 -build -cook -map=ThirdPersonMap+ThirdPersonMap -CookCultures=en -unversionedcookedcontent -stage -package -stagingdirectory="+ packagePath +"/ -cmdline= -Messaging -addcmdline=-SessionId=AEB8DEDF4072DA8386DFB2AC9A4483C4 -SessionOwner='berge' -SessionName='Tooling'";
+                            process.StartInfo.FileName = "./Engine/Build/BatchFiles/RunUAT.bat";
+                            process.OutputDataReceived += (sender, e) => Console.WriteLine(e.Data);
+                            //process.BeginOutputReadLine();
+                            process.Start();
+                            process.WaitForExit();
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Data);
+                        }
+                        
+                        
                     }
+                    //"D:\MoteursDeJeuTimer_Dev\TP3_moteurDeJeu\TP3_moteurDeJeu.uproject" package "D:\TestToolingBuild"
+                    
+                    //D:\gitKrakenRepos\CB_Tp1_Tooling\CB_TP1_Tooling\CB_TP1_Tooling\bin\Debug\net9.0\CB_TP1_Tooling.exe D:\UnrealEngine\Games\Test2\Test2.uproject package D:\TestToolingBuild
                     break;
             }
-
             
-            
-                
-            
-
-
         }
 
         public static ProjectInfo GetProjectInfos(string projectPath)

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CB_TP1_Tooling")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fda4f1f9e8c5e1246755f4b793befe01d227f4bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd4546cb78296a3cfe8f7f09f963c410ffd94129")]
 [assembly: System.Reflection.AssemblyProductAttribute("CB_TP1_Tooling")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CB_TP1_Tooling")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
